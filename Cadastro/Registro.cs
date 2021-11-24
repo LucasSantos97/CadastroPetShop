@@ -29,7 +29,7 @@ namespace Cadastro
             mtbIdadePet.ResetText();
         }
 
-        //Carrega as informções da Classe Cadastro no DataGridView
+        //Carrega as informções do BD no DataGridView
         private void Registro_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -43,7 +43,7 @@ namespace Cadastro
 
         }
 
-        //Atualiza as informções da Classe Cadastro no DataGridView
+        //Atualiza as informções do BD no DataGridView
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -65,7 +65,7 @@ namespace Cadastro
             MessageBox.Show("Atualizado com sucesso!");
             Clear();
         }
-
+        //Pesquisa as informções do BD no DataGridView
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -79,9 +79,10 @@ namespace Cadastro
             dgvCadastros.DataSource = dt;
         }
 
+        //Cadastra as informções no BD
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-
+            //Dalida os campos vazios
             if (tbNomePet.Text.Trim().Length < 1)
             {
                 MessageBox.Show("Nome Pet está vazio");
@@ -118,6 +119,7 @@ namespace Cadastro
                 return;
             }
 
+            //Regra de negócio - Não aceita cadastros de serviços fora do horário de serviço
             string horario = mtbHora.Text;
             string horaMax = "17:01";
             string horaMin = "07:59";
@@ -131,7 +133,7 @@ namespace Cadastro
             }
             else
             {
-
+                //Insere do BD
                 SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
                 con.Open();
 
@@ -161,7 +163,7 @@ namespace Cadastro
 
 
         }
-
+        //Deleta as informções no BD
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -185,6 +187,8 @@ namespace Cadastro
 
         }
 
+        //Ao lcicar no dgv preenche os campos do formulário
+
         private void dgvCadastros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvCadastros.Rows [e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -203,12 +207,14 @@ namespace Cadastro
 
         }
 
+        //Btn Limpar formulário
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             Clear();
         }
 
 
+        //Leva para o fmr Estoque
         private void btnEstoque__Click(object sender, EventArgs e)
         {
             this.Close();
@@ -216,6 +222,7 @@ namespace Cadastro
             estoque.Show();
         }
 
+        //Atualzia a vizuação do dgv
         private void btnRefresh_Click(object sender, EventArgs e)
         {
 

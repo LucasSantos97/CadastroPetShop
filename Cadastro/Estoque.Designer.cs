@@ -164,7 +164,7 @@ namespace Cadastro
             this.tbFornProd.Location = new System.Drawing.Point(933, 299);
             this.tbFornProd.Name = "tbFornProd";
             this.tbFornProd.Size = new System.Drawing.Size(261, 23);
-            this.tbFornProd.TabIndex = 18;
+            this.tbFornProd.TabIndex = 4;
             // 
             // btnLimparEstoque
             // 
@@ -175,7 +175,7 @@ namespace Cadastro
             this.btnLimparEstoque.Location = new System.Drawing.Point(933, 481);
             this.btnLimparEstoque.Name = "btnLimparEstoque";
             this.btnLimparEstoque.Size = new System.Drawing.Size(261, 33);
-            this.btnLimparEstoque.TabIndex = 17;
+            this.btnLimparEstoque.TabIndex = 10;
             this.btnLimparEstoque.Text = "Limpar Campos";
             this.btnLimparEstoque.UseVisualStyleBackColor = false;
             this.btnLimparEstoque.Click += new System.EventHandler(this.btnLimparEstoque_Click);
@@ -187,7 +187,7 @@ namespace Cadastro
             this.mtbIDEstoque.Mask = "0000000000";
             this.mtbIDEstoque.Name = "mtbIDEstoque";
             this.mtbIDEstoque.Size = new System.Drawing.Size(125, 23);
-            this.mtbIDEstoque.TabIndex = 16;
+            this.mtbIDEstoque.TabIndex = 11;
             this.mtbIDEstoque.ValidatingType = typeof(int);
             // 
             // mtbQuantidadeProduto
@@ -197,7 +197,7 @@ namespace Cadastro
             this.mtbQuantidadeProduto.Mask = "000";
             this.mtbQuantidadeProduto.Name = "mtbQuantidadeProduto";
             this.mtbQuantidadeProduto.Size = new System.Drawing.Size(87, 23);
-            this.mtbQuantidadeProduto.TabIndex = 15;
+            this.mtbQuantidadeProduto.TabIndex = 1;
             this.mtbQuantidadeProduto.ValidatingType = typeof(int);
             // 
             // btnPesquisarEstoque
@@ -209,7 +209,7 @@ namespace Cadastro
             this.btnPesquisarEstoque.Location = new System.Drawing.Point(192, 10);
             this.btnPesquisarEstoque.Name = "btnPesquisarEstoque";
             this.btnPesquisarEstoque.Size = new System.Drawing.Size(82, 45);
-            this.btnPesquisarEstoque.TabIndex = 14;
+            this.btnPesquisarEstoque.TabIndex = 12;
             this.btnPesquisarEstoque.Text = "Pesquisar";
             this.btnPesquisarEstoque.UseVisualStyleBackColor = false;
             this.btnPesquisarEstoque.Click += new System.EventHandler(this.btnPesquisarEstoque_Click);
@@ -223,7 +223,7 @@ namespace Cadastro
             this.btnDeletarEstoque.Location = new System.Drawing.Point(1112, 418);
             this.btnDeletarEstoque.Name = "btnDeletarEstoque";
             this.btnDeletarEstoque.Size = new System.Drawing.Size(82, 45);
-            this.btnDeletarEstoque.TabIndex = 13;
+            this.btnDeletarEstoque.TabIndex = 9;
             this.btnDeletarEstoque.Text = "Deletar";
             this.btnDeletarEstoque.UseVisualStyleBackColor = false;
             this.btnDeletarEstoque.Click += new System.EventHandler(this.btnDeletarEstoque_Click);
@@ -237,7 +237,7 @@ namespace Cadastro
             this.btnAtualizarEstoque.Location = new System.Drawing.Point(1023, 418);
             this.btnAtualizarEstoque.Name = "btnAtualizarEstoque";
             this.btnAtualizarEstoque.Size = new System.Drawing.Size(82, 45);
-            this.btnAtualizarEstoque.TabIndex = 10;
+            this.btnAtualizarEstoque.TabIndex = 8;
             this.btnAtualizarEstoque.Text = "Atualizar";
             this.btnAtualizarEstoque.UseVisualStyleBackColor = false;
             this.btnAtualizarEstoque.Click += new System.EventHandler(this.btnAtualizarEstoque_Click);
@@ -271,7 +271,7 @@ namespace Cadastro
             this.btnCadastrarEstoque.Location = new System.Drawing.Point(933, 418);
             this.btnCadastrarEstoque.Name = "btnCadastrarEstoque";
             this.btnCadastrarEstoque.Size = new System.Drawing.Size(82, 45);
-            this.btnCadastrarEstoque.TabIndex = 9;
+            this.btnCadastrarEstoque.TabIndex = 7;
             this.btnCadastrarEstoque.Text = "Cadastrar";
             this.btnCadastrarEstoque.UseVisualStyleBackColor = false;
             this.btnCadastrarEstoque.Click += new System.EventHandler(this.btnCadastrarEstoque_Click);
@@ -283,7 +283,7 @@ namespace Cadastro
             this.mtbContatoFornecedor.Mask = "(99) 00000-0000";
             this.mtbContatoFornecedor.Name = "mtbContatoFornecedor";
             this.mtbContatoFornecedor.Size = new System.Drawing.Size(146, 23);
-            this.mtbContatoFornecedor.TabIndex = 7;
+            this.mtbContatoFornecedor.TabIndex = 6;
             // 
             // mtbDiaEntradaProd
             // 
@@ -292,7 +292,7 @@ namespace Cadastro
             this.mtbDiaEntradaProd.Mask = "00/00/0000";
             this.mtbDiaEntradaProd.Name = "mtbDiaEntradaProd";
             this.mtbDiaEntradaProd.Size = new System.Drawing.Size(87, 23);
-            this.mtbDiaEntradaProd.TabIndex = 6;
+            this.mtbDiaEntradaProd.TabIndex = 5;
             this.mtbDiaEntradaProd.ValidatingType = typeof(System.DateTime);
             // 
             // tbCategoriaProduto
@@ -301,7 +301,7 @@ namespace Cadastro
             this.tbCategoriaProduto.Location = new System.Drawing.Point(933, 233);
             this.tbCategoriaProduto.Name = "tbCategoriaProduto";
             this.tbCategoriaProduto.Size = new System.Drawing.Size(261, 23);
-            this.tbCategoriaProduto.TabIndex = 8;
+            this.tbCategoriaProduto.TabIndex = 3;
             // 
             // label3
             // 
@@ -349,7 +349,7 @@ namespace Cadastro
             this.mtbPrecoUnProduto.Location = new System.Drawing.Point(1048, 169);
             this.mtbPrecoUnProduto.Name = "mtbPrecoUnProduto";
             this.mtbPrecoUnProduto.Size = new System.Drawing.Size(146, 23);
-            this.mtbPrecoUnProduto.TabIndex = 4;
+            this.mtbPrecoUnProduto.TabIndex = 2;
             // 
             // label2
             // 
@@ -377,7 +377,7 @@ namespace Cadastro
             this.tbNomeProduto.Location = new System.Drawing.Point(933, 105);
             this.tbNomeProduto.Name = "tbNomeProduto";
             this.tbNomeProduto.Size = new System.Drawing.Size(261, 23);
-            this.tbNomeProduto.TabIndex = 2;
+            this.tbNomeProduto.TabIndex = 0;
             // 
             // lblNomePet
             // 

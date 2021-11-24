@@ -19,6 +19,7 @@ namespace Cadastro
             InitializeComponent();
         }
 
+        //Limpa os campos do frm
         public void Clear()
         {
             tbCategoriaProduto.Text = tbNomeProduto.Text = tbFornProd.Text = string.Empty;
@@ -29,6 +30,7 @@ namespace Cadastro
             mtbQuantidadeProduto.ResetText();
         }
 
+        //Pesquisa com base no ID no BD
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -47,9 +49,10 @@ namespace Cadastro
 
         }
 
+        //Cadastra no BD
         private void btnCadastrarEstoque_Click(object sender, EventArgs e)
         {
-
+            //Verifica os frm se não estão vazios
             if (tbNomeProduto.Text.Trim().Length < 1)
             {
                 MessageBox.Show("Nome Produto está vazio");
@@ -86,6 +89,7 @@ namespace Cadastro
                 return;
             }
 
+            //Insere no BD
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             con.Open();
 
@@ -110,6 +114,7 @@ namespace Cadastro
             dgvEstoque.DataSource = dt;
         }
 
+        //Atualiza no BD
         private void btnAtualizarEstoque_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -132,6 +137,7 @@ namespace Cadastro
             Clear();
         }
 
+        //Deleta no BD
         private void btnDeletarEstoque_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -154,11 +160,13 @@ namespace Cadastro
             dgvEstoque.DataSource = dt;
         }
 
+        //Limpa o frm
         private void btnLimparEstoque_Click(object sender, EventArgs e)
         {
             Clear();
         }
 
+        //Pesquisa no BD
         private void btnPesquisarEstoque_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -172,6 +180,7 @@ namespace Cadastro
             dgvEstoque.DataSource = dt;
         }
 
+        //Pega as informações do dgv para colocar no frm
         private void dgvEstoque_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvEstoque.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -188,7 +197,7 @@ namespace Cadastro
             }
 
         }
-
+        //Carrega as informações no BD
         private void Estoque_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -200,7 +209,7 @@ namespace Cadastro
             da.Fill(dt);
             dgvEstoque.DataSource = dt;
         }
-
+        //Vai para a tela registro
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -212,7 +221,7 @@ namespace Cadastro
         {
 
         }
-
+        //Atualiza o dgv
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Agendamento;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
